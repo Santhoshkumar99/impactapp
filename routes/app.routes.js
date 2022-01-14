@@ -5,8 +5,8 @@ const upload = require("../middleware/multer");
 
 let routes = (app) => {
   router.post("/upload", upload.single("file"), appController.upload);
-  router.get("/reports", appController.getReports);
-  router.get("/report/:id?", appController.getReportById);
+  router.get("/students", appController.getReports);
+  router.get("/student/:id?", appController.getReportById);
 
   app.use("/api/v1", router);
 };
