@@ -11,8 +11,6 @@ npm install
 ## Usage
 
 ```
-If the installation was successful, you should be able to run the following command.
-
     $ node --version
     v8.11.3
 
@@ -20,6 +18,16 @@ If the installation was successful, you should be able to run the following comm
     6.1.0
 ```
 
+## APIs
+
+```
+ $ /upload - Upload a CSV file and insert into students table
+
+ $ /students/:id/result - Get the result of the student by passing id
+
+ $ /students?resultStatus=passed/failed - get all the students passed/failed by
+passing the resultStatus querystring
+```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
