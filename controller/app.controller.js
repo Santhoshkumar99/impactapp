@@ -4,6 +4,7 @@ const Report = db.reports;
 const fs = require("fs");
 const csv = require("fast-csv");
 
+// Upload student result CSV file API
 const upload = async (req, res) => {
   try {
     if (req.file == undefined) {
@@ -49,6 +50,7 @@ const upload = async (req, res) => {
   }
 };
 
+// Get passed or failed student by passing Query string API
 const getReports = (req, res) => {
   Report.findAll({
     raw: true,
@@ -81,6 +83,7 @@ const getReports = (req, res) => {
     });
 };
 
+//Get result of particular Student by ID
 const getReportById = (req, res) => {
   Report.findOne({
     where: {
